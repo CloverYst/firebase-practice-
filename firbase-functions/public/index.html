@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorial Requests</title>
+    <!-- stylesheets -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <div class="auth open">
+      <div class="modal">
+        <h2>Login</h2>
+        <form class="login">
+          <input typw="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <button>Login</button>
+          <p class="error"></p>
+        </form>
+        <div>No account?<a class="switch">Register instead</a> </div>
+      </div>
+      <div class="modal">
+        <h2>Register</h2>
+        <form class="register">
+          <input type="text" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <button>Register</button>
+          <p class="error"></p>
+        </form>
+        <div>Got a account?<a class="switch">Login instead</a> </div>
+      </div>
+    </div>
+    
+    <div class="new-request">
+      <div class="modal">
+        <h2>request a Turtorial</h2>
+        <form>
+          <input type="text" name="request" placeholder="Request...">
+          <button>Submit Request</button>
+          <p class="error"></p>
+        </form>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <a class="add-request">add request</a>
+        <a class="sign-out">sign out</a>
+      </nav>
+    </header>
+
+    <section class="content">
+      <h1>Tutorial Requests</h1>
+      <ul class="request-list"> 
+        <li>
+          <span class="text">my tutorial</span>
+          <div>
+            <span class="votes">125</span>
+            <i class="material-icons upvote">arrow_upward</i>
+          </div>
+        </li>
+      </ul>
+      <button class="call">Say Hello</button>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-functions.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyA-Lxg9xZFi9QLUIdc5qP8dsNM-mSGAXA8",
+        authDomain: "fir-web-learn-89eec.firebaseapp.com",
+        databaseURL: "https://fir-web-learn-89eec-default-rtdb.firebaseio.com",
+        projectId: "fir-web-learn-89eec",
+        storageBucket: "fir-web-learn-89eec.appspot.com",
+        messagingSenderId: "516306136055",
+        appId: "1:516306136055:web:a7f93b34c48f64c96adcf2"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>
